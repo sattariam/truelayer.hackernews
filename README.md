@@ -47,7 +47,7 @@ To run the app, follow the steps.
 2 - Run the application by the following command
 
 ```
-TrueLayer.HackerNews-Demo.exe [options]
+TrueLayer.HackerNews.exe [options]
 
 options
     --posts : posts count flag
