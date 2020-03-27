@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "TrueLayer.HackerNews": {
+      "commandName": "Project",
+      "commandLineArgs": "--posts 2"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}
