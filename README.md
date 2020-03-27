@@ -59,9 +59,9 @@ Sending the posts count is optional and it will be considered as max(100) if it 
 ```
 Examples:
 
-C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews-Demo.exe                   => Returns top 100(max) news items
+C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews.exe                   => Returns top 100(max) news items
 
-C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews-Demo.exe --posts 15        => Returns top 15 news items
+C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews.exe --posts 15        => Returns top 15 news items
 ```
 [![Tests Result](./Images/application.PNG)]()
 
