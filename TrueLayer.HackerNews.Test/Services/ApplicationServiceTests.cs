@@ -59,15 +59,12 @@ namespace TrueLayer.HackerNews.Test.Services
             };
         }
 
-        private static string SerializeObject(object objectData)
-        {
-            return JsonConvert.SerializeObject(objectData,
-                                                new JsonSerializerSettings
-                                                {
-                                                    ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                                                    Formatting = Formatting.Indented
-                                                });
-        }
+        private static string SerializeObject(object objectData) => JsonConvert.SerializeObject(objectData,
+                                        new JsonSerializerSettings
+                                        {
+                                            ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                                            Formatting = Formatting.Indented
+                                        });
 
 
         [Fact]

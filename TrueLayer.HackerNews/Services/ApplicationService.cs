@@ -38,15 +38,12 @@ namespace TrueLayer.HackerNews.Services
             _console.WriteLine(SerializeObject(newsItems));
         }
 
-        private static string SerializeObject(object objectData)
-        {
-            return JsonConvert.SerializeObject(objectData,
+        private static string SerializeObject(object objectData) => JsonConvert.SerializeObject(objectData,
                                                 new JsonSerializerSettings
                                                 {
                                                     ContractResolver = new CamelCasePropertyNamesContractResolver(),
                                                     Formatting = Formatting.Indented
                                                 });
-        }
 
         private int GetRequestedPostsCount(string[] args)
         {
@@ -56,6 +53,8 @@ namespace TrueLayer.HackerNews.Services
             {
                 Int32.TryParse(args[1], out postsCount);
             }
+
+            _logger.LogInformation("Requested posts count = " + (postsCount > 0 ? postsCount.ToString() : "default (top 100 posts)"));
 
             return postsCount;
         }
