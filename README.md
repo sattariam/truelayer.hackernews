@@ -6,6 +6,7 @@
   - [Prerequisites](#prerequisites)
   - [Build with](#build-with)
   - [Settings](#settings)
+  - [Considerations](#considerations)
   - [Running the app](#running-the-app)
   - [Running the app with caching demo](#running-the-app-with-caching-demo)
   - [Running the unit tests](#running-the-unit-tests)
@@ -25,6 +26,15 @@ To Build this application you need the following:
 - HackerNews API base URL is specified in appsettings.json file and is easily changable and configurble for CI/CD pipe line.
 - There is loggin setting as well which could be change by environment.
 
+## Considerations
+- The application will validate the news item before return and if any of the new ites were not valid, it will be ignored and next news item in the queue will be process and return.
+- The validations list are :
+  - title and author are non empty strings not longer than 256 characters.
+  - uri is a [valid URI](https://tools.ietf.org/html/rfc3986)
+  - points, comments and rank are integers >= 0.
+  
+- The input arguments are validating and if posts count wasn't valid or didn't passed, the default posts count(100) will be considered to return the result.
+- The Docker file added and the project is ready to containerize.
 
 ## Running the app
 
