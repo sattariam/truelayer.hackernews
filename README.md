@@ -42,7 +42,7 @@ To Build this application you need the following:
 
 To run the app, follow the steps.
 
-1 - Open Command Prompt and change the path to application execution folder [application execution folder](./TrueLayer.HackerNews-Demo)
+1 - Open Command Prompt and change the path to [application execution folder](./TrueLayer.HackerNews-Demo)
 
 2 - Run the application by the following command
 
