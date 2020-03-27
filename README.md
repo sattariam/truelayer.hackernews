@@ -5,6 +5,7 @@
 - [TrueLayer HacherNews](#truelayer-hachernews)
   - [Prerequisites](#prerequisites)
   - [Build with](#build-with)
+  - [Settings](#settings)
   - [Running the app](#running-the-app)
   - [Running the app with caching demo](#running-the-app-with-caching-demo)
   - [Running the unit tests](#running-the-unit-tests)
@@ -19,6 +20,11 @@ To Build this application you need the following:
 - [.LazyCache](https://github.com/alastairtree/LazyCache/) Caching the news items detail.
 - [.NSubstitute](https://nsubstitute.github.io/) Mocking the objects in unit tests.
 - [.FluentAssertion](https://fluentassertions.com/) More readable unit tests assertion.
+
+## Settings
+- HackerNews API base URL is specified in appsettings.json file and is easily changable and configurble for CI/CD pipe line.
+- There is loggin setting as well which could be change by environment.
+
 
 ## Running the app
 
