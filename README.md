@@ -27,7 +27,7 @@ To Build this application you need the following:
 - There is loggin setting as well which could be change by environment.
 
 ## Considerations
-- The application will validate the news item before return and if any of the new ites were not valid, it will be ignored and next news item in the queue will be process and return.
+- The application is validating the news item detail before returning the result and if any of the new items was not valid, it will be ignored and next news item in the queue will be taken, process and return.
 - The validations list are :
   - title and author are non empty strings not longer than 256 characters.
   - uri is a [valid URI](https://tools.ietf.org/html/rfc3986)
@@ -35,6 +35,8 @@ To Build this application you need the following:
   
 - The input arguments are validating and if posts count wasn't valid or didn't passed, the default posts count(100) will be considered to return the result.
 - The Docker file added and the project is ready to containerize.
+- We could have more granularity in services and test the functionalities in little pieces to follow SRP in better shape, But I tried to keep the project as simple as possible and split the functionalities to some reasonable classes.
+- I would prefer to move the News related functionality to the separated library to be able to use it by different consumer types like Web API same as Console App. as I explained in the previous point I tried to keep it as simple as possible.
 
 ## Running the app
 
@@ -52,7 +54,7 @@ options
           n : posts count
 ```
 
-Specifying the posts count is optional and it will be considered as max(100) if it doesn't pass.
+Sending the posts count is optional and it will be considered as max(100) if it doesn't pass.
 
 ```
 Examples:
@@ -66,7 +68,7 @@ C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews-Demo.exe --posts 15        =>
 
 ## Running the app with caching demo
 
-I've been used the caching for a news item to make it faster and reduce the API call when we run the app as a service.
+I've been used the caching for saving the news item detail to make it faster and reduce the API call when we run the app as a service.
 To see how it works, you can run the application from [TrueLayer.HackerNews-Caching-Demo](./TrueLayer.HackerNews-Caching-Demo) and follow the instructions in the app after execution.
 
 [![Tests Result](./Images/cachingdemo.gif)]()
