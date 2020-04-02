@@ -1,8 +1,8 @@
-# TrueLayer HacherNews
+# TrueLayer HackerNews
 
 > A simple console application to output the top stories from [HackerNews](https://news.ycombinator.com/)
 
-- [TrueLayer HacherNews](#truelayer-hachernews)
+- [TrueLayer HackerNews](#truelayer-hackernews)
   - [Prerequisites](#prerequisites)
   - [Build with](#build-with)
   - [Settings](#settings)
