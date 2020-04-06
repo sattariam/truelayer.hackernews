@@ -5,10 +5,10 @@ WORKDIR /app
 
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1-buster AS build
 WORKDIR "/src"
-COPY ["TrueLayer.HackerNews.csproj", "TrueLayerHackerNews/"]
-RUN dotnet restore "TrueLayerHackerNews/TrueLayer.HackerNews.csproj"
-WORKDIR "/src/TrueLayerHackerNews"
-COPY . .
+COPY ["TrueLayer.HackerNews/TrueLayer.HackerNews.csproj", "TrueLayer.HackerNews/"]
+RUN dotnet restore "TrueLayer.HackerNews/TrueLayer.HackerNews.csproj"
+WORKDIR "/src/TrueLayer.HackerNews"
+COPY TrueLayer.HackerNews .
 RUN dotnet build "TrueLayer.HackerNews.csproj" -c Release -o /app/build
 
 FROM build AS publish
