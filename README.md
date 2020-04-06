@@ -1,8 +1,8 @@
-# TrueLayer HackerNews
+# TrueLayer HacherNews
 
 > A simple console application to output the top stories from [HackerNews](https://news.ycombinator.com/)
 
-- [TrueLayer HackerNews](#truelayer-hackernews)
+- [TrueLayer HacherNews](#truelayer-hachernews)
   - [Prerequisites](#prerequisites)
   - [Build with](#build-with)
   - [Settings](#settings)
@@ -65,6 +65,15 @@ C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews.exe --posts 15        => Retu
 ```
 [![Tests Result](./Images/application.PNG)]()
 
+##Docker
+-   Build : 
+```
+docker build -t sattariam/truelayerhackernews . 
+```
+- Run :
+```
+docker run -it --rm sattariam/truelayerhackernews
+```
 
 ## Running the app with caching demo
 
