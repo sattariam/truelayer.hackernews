@@ -80,7 +80,11 @@ docker build -t truelayerhackernews
 
 Run :
 ```
-docker run -it --rm Title [--posts] [n]
+docker run -it --rm Title [options]
+
+options
+    --posts : posts count flag
+          n : posts count
 
 Examples:
 docker run -it --rm truelayerhackernews                   => Returns top 100(max) news items
