@@ -8,6 +8,7 @@
   - [Settings](#settings)
   - [Considerations](#considerations)
   - [Running the app](#running-the-app)
+  - [Docker](#docker)
   - [Running the app with caching demo](#running-the-app-with-caching-demo)
   - [Running the unit tests](#running-the-unit-tests)
 ## Prerequisites
@@ -65,7 +66,7 @@ C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews.exe --posts 15        => Retu
 ```
 [![Tests Result](./Images/application.PNG)]()
 
-##Docker
+## Docker
 -   Build : 
 ```
 docker build -t sattariam/truelayerhackernews . 
