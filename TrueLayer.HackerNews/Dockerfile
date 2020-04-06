@@ -17,4 +17,4 @@ RUN dotnet publish "TrueLayer.HackerNews.csproj" -c Release -o /app/publish
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "TrueLayer.HackerNews.dll", "--posts", "20"]
+ENTRYPOINT ["dotnet", "TrueLayer.HackerNews.dll"]

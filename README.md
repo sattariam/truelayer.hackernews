@@ -67,13 +67,24 @@ C:\TrueLayer.HackerNews-Demo> TrueLayer.HackerNews.exe --posts 15        => Retu
 [![Tests Result](./Images/application.PNG)]()
 
 ## Docker
--   Build : 
+
+Target OS: Linux
+
+Build : 
 ```
-docker build -t sattariam/truelayerhackernews . 
+docker build -t Title . 
+
+Examples:
+docker build -t truelayerhackernews   
 ```
-- Run :
+
+Run :
 ```
-docker run -it --rm sattariam/truelayerhackernews
+docker run -it --rm Title [--posts] [n]
+
+Examples:
+docker run -it --rm truelayerhackernews                   => Returns top 100(max) news items
+docker run -it --rm truelayerhackernews --posts 15        => Returns top 15 news items
 ```
 
 ## Running the app with caching demo
