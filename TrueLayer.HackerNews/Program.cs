@@ -11,7 +11,6 @@ namespace TrueLayer.HackerNews
             var serviceProvider = Startup.ConfigureServices();
             var applicationService = serviceProvider.GetService<IApplicationService>();
             await applicationService.Run(args);
-
         }
     }
 }
