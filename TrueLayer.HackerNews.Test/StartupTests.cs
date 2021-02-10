@@ -17,7 +17,7 @@ namespace TrueLayer.HackerNews.Test
         public void ConfigureServices_WhenInvoke_RegistersDependenciesAndSettings()
         {
             //  Arrange & Act
-            var serviceProvider = Startup.ConfigureServices();
+            var serviceProvider = new Startup("testappsettings.json").ConfigureServices();
             using var scope = serviceProvider.CreateScope();
 
             //  Assert

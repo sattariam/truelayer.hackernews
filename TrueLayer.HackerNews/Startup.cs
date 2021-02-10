@@ -8,20 +8,20 @@ using TrueLayer.HackerNews.Wrappers;
 
 namespace TrueLayer.HackerNews
 {
-    public static class Startup
+    public class Startup
     {
-        static Startup()
+        public Startup(string appSettingsFile = "appsettings.json")
         {
             var builder = new ConfigurationBuilder()
                 .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+                .AddJsonFile(appSettingsFile, optional: true, reloadOnChange: true);
 
             Configuration = builder.Build();
         }
 
-        public static IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }
 
-        public static ServiceProvider ConfigureServices()
+        public ServiceProvider ConfigureServices()
         {
             IServiceCollection services = new ServiceCollection();
 

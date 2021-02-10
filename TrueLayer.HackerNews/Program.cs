@@ -8,7 +8,7 @@ namespace TrueLayer.HackerNews
     {
         static async Task Main(string[] args)
         {
-            var serviceProvider = Startup.ConfigureServices();
+            var serviceProvider = new Startup().ConfigureServices();
             var applicationService = serviceProvider.GetService<IApplicationService>();
             await applicationService.Run(args);
         }
